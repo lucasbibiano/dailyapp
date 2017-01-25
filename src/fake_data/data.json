@@ -1,0 +1,71 @@
+{
+  "sprints": [
+    {
+      "start_date": "14/01/2017",
+      "end_date": "15/01/2017",
+      "events": [
+        {
+          "type": "done",
+          "name": "[BB] DSP-2743 DeviceService staging",
+          "tags": "bb, dsp, deviceservice, staging",
+          "reporter": "andrezacm",
+          "notes": "It was a very difficult task, bla bla bla",
+          "date": "14/01/2017"
+        },
+        {
+          "type": "blocker",
+          "name": "[BB] SENTINEL_TROVE setting is blocking some java services to be deployed to staging environment",
+          "tags": "bb, settings, staging, java",
+          "reporter": "andrezacm",
+          "notes": "Waiting for MarceloW's response",
+          "date": "14/01/2017"
+        },
+        {
+          "type": "doing",
+          "name": "[BB] DSP-2893 Wrong flag name",
+          "tags": "bb, dsp, flag, bug",
+          "reporter": "andrezacm",
+          "notes": "",
+          "date": "15/01/2017"
+        },
+        {
+          "type": "done",
+          "name": "[BB] DSP-1234 Minor text fixes",
+          "tags": "bb, dsp, text, low-impact",
+          "reporter": "andrezacm",
+          "notes": "",
+          "date": "15/01/2017"
+        }
+      ]
+    },
+    {
+      "start_date": "16/01/2017",
+      "end_date": "17/01/2017",
+      "events": [
+        {
+          "type": "idea",
+          "name": "We should improve dps' response time by setting memory to 256mb instead of 64mb",
+          "tags": "settings, devops, memory, performance",
+          "reporter": "andrezacm",
+          "notes": "",
+          "date": "16/01/2017"
+        },
+        {
+          "type": "activity",
+          "name": "[MW] Ingested 2M+ devices via Neustar",
+          "tags": "mw, devops, neustar",
+          "reporter": "andrezacm",
+          "notes": "",
+          "date": "16/01/2017"
+        },
+        {
+          "type": "release",
+          "system": "Nexus",
+          "version": "0.143",
+          "date": "17/01/2017"
+        }
+      ]
+    }
+  ]
+
+}
