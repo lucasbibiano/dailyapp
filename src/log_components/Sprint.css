@@ -1,4 +1,12 @@
+.Sprint {
+  margin-top: 1em;
+}
+
 .Sprint > h1 {
-  border-bottom: 1px solid black;
   color: #333;
+  text-align: center;
+}
+
+.events h2 {
+  margin-top: 1em;
 }

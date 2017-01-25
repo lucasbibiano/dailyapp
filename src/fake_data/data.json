@@ -62,7 +62,8 @@
           "type": "release",
           "system": "Nexus",
           "version": "0.143",
-          "date": "17/01/2017"
+          "date": "17/01/2017",
+          "notes": "Improved a lot of things"
         }
       ]
     }

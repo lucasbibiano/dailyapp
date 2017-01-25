@@ -5,16 +5,18 @@ class Event extends Component {
 
   render() {
     return (
-      <div className="Activity">
-        <h3>{this.props.name}</h3>
-
-        <p>{this.props.tags}</p>
-
-        <p>{this.props.reporter}</p>
-
-        <p>{this.props.notes}</p>
-
-        <p>{this.props.date}</p>
+      <div className="ui fluid card">
+        <div className="content">
+          <div className="header">{this.props.name}</div>
+          <div className="meta">{this.props.date}</div>
+          <div className="meta">{this.props.reporter}</div>
+          <div className="description">
+            {this.props.notes || <i>No notes</i>}
+          </div>
+        </div>
+        <div className="extra content">
+          {this.props.tags}
+        </div>
       </div>
     );
   }
