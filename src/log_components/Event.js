@@ -8,14 +8,17 @@ class Event extends Component {
       <div className="ui fluid card">
         <div className="content">
           <div className="header">{this.props.name}</div>
-          <div className="meta">{this.props.date}</div>
-          <div className="meta">{this.props.reporter}</div>
-          <div className="description">
-            {this.props.notes || <i>No notes</i>}
+          <div className="meta left floated">{this.props.reporter}</div>
+          {this.props.notes &&
+            <div className="description left floated">
+              {this.props.notes}
+            </div>
+          }
+          <div className="right floated labels">
+            {this.props.tags.split(',').map((tag) => {
+              return <span className="ui label">{tag}</span>
+            })}
           </div>
-        </div>
-        <div className="extra content">
-          {this.props.tags}
         </div>
       </div>
     );

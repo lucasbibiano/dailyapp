@@ -18,22 +18,31 @@ class Sprint extends Component {
   }
 
   render() {
-    let groupedEvents = _.groupBy(this.props.events, 'type');
+    let eventsByDate = _.groupBy(this.props.events, 'date');
 
     return (
       <div className="Sprint">
         <h1>Sprint {this.props.start_date} - {this.props.end_date}</h1>
 
-        {Object.keys(groupedEvents).map((type) => {
-          let events = groupedEvents[type];
+        {Object.keys(eventsByDate).map((date) => {
+          let eventsByType = _.groupBy(eventsByDate[date], 'type');
 
           return (
             <div className="events">
-              <h2>{type} ({events.length})</h2>
+              <h3>{date}</h3>
 
               <div className="ui">
-                {events.map((event) => {
-                  return this.renderByType(event)
+                {Object.keys(eventsByType).map((type) => {
+                  let events = eventsByType[type];
+
+                  return (
+                    <div>
+                      <h4>{type} ({events.length})</h4>
+                      {events.map((event) => {
+                        return this.renderByType(event)
+                      })}
+                    </div>
+                  )
                 })}
               </div>
             </div>

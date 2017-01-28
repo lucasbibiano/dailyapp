@@ -5,14 +5,6 @@
       "end_date": "15/01/2017",
       "events": [
         {
-          "type": "done",
-          "name": "[BB] DSP-2743 DeviceService staging",
-          "tags": "bb, dsp, deviceservice, staging",
-          "reporter": "andrezacm",
-          "notes": "It was a very difficult task, bla bla bla",
-          "date": "14/01/2017"
-        },
-        {
           "type": "blocker",
           "name": "[BB] SENTINEL_TROVE setting is blocking some java services to be deployed to staging environment",
           "tags": "bb, settings, staging, java",
@@ -23,7 +15,7 @@
         {
           "type": "doing",
           "name": "[BB] DSP-2893 Wrong flag name",
-          "tags": "bb, dsp, flag, bug",
+          "tags": "bb, dsp, flag, bug, bb, dsp, flag, bug, bb, dsp, flag, bug, bb, dsp, flag, bug",
           "reporter": "andrezacm",
           "notes": "",
           "date": "15/01/2017"
@@ -35,6 +27,22 @@
           "reporter": "andrezacm",
           "notes": "",
           "date": "15/01/2017"
+        },
+        {
+          "type": "done",
+          "name": "[BB] DSP-1235 Fix memory leak",
+          "tags": "bb, dsp, memory, high-impact, hot-fix",
+          "reporter": "andrezacm",
+          "notes": "",
+          "date": "15/01/2017"
+        },
+        {
+          "type": "done",
+          "name": "[BB] DSP-2743 DeviceService staging",
+          "tags": "bb, dsp, deviceservice, staging",
+          "reporter": "andrezacm",
+          "notes": "It was a very difficult task, bla bla bla",
+          "date": "14/01/2017"
         }
       ]
     },
