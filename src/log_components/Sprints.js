@@ -3,17 +3,15 @@ import './Sprints.css';
 
 import Sprint from './Sprint'
 
-class Sprints extends Component {
+const Sprints = (props) => {
 
-  render() {
-    return (
-      <div className="Sprints">
-        {this.props.sprints.map((sprint) => {
-          return <Sprint {...sprint} />
-        })}
-      </div>
-    );
-  }
+  return (
+    <div className="Sprints">
+      {props.sprints.map((sprint) => {
+        return <Sprint {...sprint} />
+      })}
+    </div>
+  );
 }
 
 export default Sprints;
