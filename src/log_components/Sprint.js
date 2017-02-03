@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Sprint.css';
 
-
 import _ from 'lodash'
 
 import Event from './Event'
