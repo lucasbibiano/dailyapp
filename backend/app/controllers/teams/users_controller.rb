@@ -2,10 +2,10 @@ class Teams::UsersController < Teams::TeamTokenProtectedController
 
   # POST /teams/1/users
   def create
-    @user = User.new(user_params.merge(team_id: @team.id))
+    @user = User.new(user_params.merge(team: @team))
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end
@@ -13,11 +13,7 @@ class Teams::UsersController < Teams::TeamTokenProtectedController
 
   private
 
-    # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name)
+      params.require(:user).permit(:name, :password)
     end
 end
-
-
-EVpBxUtYFtQK1PnFRjFSQSv5

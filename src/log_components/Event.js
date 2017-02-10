@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './Event.css';
+import './card.css';
 
 import SeeMore from './common/SeeMore'
 
 const Event = (props) => {
 
   return (
-    <div className="ui fluid card">
+    <div className={`ui fluid card ${props.type}`}>
       <div className="content">
         <div className="header">{props.name}</div>
         <div className="meta left floated">{props.reporter}</div>

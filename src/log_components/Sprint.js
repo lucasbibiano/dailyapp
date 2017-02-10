@@ -6,15 +6,19 @@ import _ from 'lodash'
 import Event from './Event'
 import Release from './Release'
 
-const groupByProps = (entries, ...props) => {
-  let prop = props[0];
 
-  if (props.length <= 0) return entries;
+const groupByDate = entries => _.groupBy(entries, 'date');
+const groupByType = entries => _.groupBy(entries, 'type');
 
-  let groupedEntries = _.groupBy(entries, prop);
+const groupBy = (entries, ...groupFuncs) => {
+  let groupFunc = groupFuncs[0];
+
+  if (groupFuncs.length <= 0) return entries;
+
+  let groupedEntries = groupFunc(entries);
 
   _.forEachRight(groupedEntries, (value, key) => {
-    groupedEntries[key] = groupByProps(value, ...props.slice(1))
+    groupedEntries[key] = groupBy(value, ...groupFuncs.slice(1))
   });
 
   return groupedEntries;
@@ -45,7 +49,7 @@ const Events = ({groupEvents}) =>
 const Sprint = ({start_date, end_date, events}) =>
   <div className="Sprint">
     <h1>Sprint {start_date} - {end_date}</h1>
-    <Events groupEvents={groupByProps(events, 'date', 'type')} />
+    <Events groupEvents={groupBy(events, groupByDate, groupByType)} />
   </div>
 
 export default Sprint;

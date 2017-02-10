@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_type: MyString
+  name: MyString
+  notes: MyText
+  reporter: one
+  tags: MyString
+  sprint: one
+
+two:
+  event_type: MyString
+  name: MyString
+  notes: MyText
+  reporter: two
+  tags: MyString
+  sprint: two

@@ -1,0 +1,23 @@
+.label {
+  margin: 5px !important;
+  margin-bottom: 0px !important;
+}
+
+.card.doing {
+  background: yellow;
+}
+.card.done {
+  background: green;
+}
+.card.blocker {
+  background: red;
+}
+.card.release {
+  background: blue;
+}
+.card.idea {
+  background: skyblue;
+}
+.card.activity {
+  background: deepskyblue;
+}
